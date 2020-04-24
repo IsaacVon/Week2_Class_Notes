@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let userChoice = prompt("r p s")
+    let choices = ["r", "p", "s"]
+    let wins = 0
+    let losses = 0
+    let ties = 0
+    let randomIndex = Math.floor(Math.random() * 3)
+    let computerChoice = choices[randomIndex]
+
+
+// person choses r
+
+        // tie
+    if (userChoice === 'r' && computerChoice === 'r') {
+                ties++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your ties ${ties}`)
+            }
+
+        // win
+            else if (userChoice === 'r' && computerChoice === 's'){
+                wins++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your wins ${wins}`)
+            }
+
+        // loss
+            else {
+                losses++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your losses ${losses}`)
+
+            }
+
+
+// person choses p
+
+        // tie
+        if (userChoice === 'p' && computerChoice === 'p') {
+                ties++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your ties ${ties}`)
+            }
+
+        // win
+            else if (userChoice === 'p' && computerChoice === 'r'){
+                wins++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your wins ${wins}`)
+            }
+
+        // loss
+            else {
+                losses++
+                alert(`computer chose ${computerChoice}`)
+                alert(`your losses ${losses}`)
+
+            }
+
+</script>
+</body>
+</html>

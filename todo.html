@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- input an array that has each item on it-->
+<!-- have java create take that and display it as a text-->
+
+<ul id="items"></ul>
+
+
+<form>
+    <p>
+        <label for="item">item</label>
+        <input type="text">Add Item</p>
+        <button>Add Item</button>
+    </p>
+</form>
+
+<script>
+
+const items = [
+    {
+        text: 'Take out trash',
+        isDone: false
+
+    },
+    {
+        text: 'Cook Dinner',
+        isDone: true
+
+    },
+    {
+        text: 'Walk the dog',
+        isDone: false
+
+    },
+    {
+        text: 'Do laundry',
+        isDone: true
+
+    },
+    {
+        text: 'Take out trash',
+        isDone: false
+
+    },
+]
+
+// view all todo list items
+
+const renterItems = () => {
+    document.getElementById('items').innerHTML = ''
+    for (let i = 0; i< items.length; i++) {
+        let itemElm = document.createElement('li')
+        itemElm.textContent = items[i].text
+        document.getElementById('items').append(itemElm)
+    }
+    }   
+
+// add to do list item
+document.getElementById('addItem').addEventListener('click', (event) => {
+    event.preventDefault()
+    items.push({
+        text: document.getElementById('item').value,
+        isDone: false   
+    })
+    renderItems()
+})
+
+</script>
+
+</body>
+</html>

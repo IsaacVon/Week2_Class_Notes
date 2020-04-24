@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- user input -->
+  <form>
+    <p>
+      <label for="username">username</label>
+      <input type="text" name="username" id="username">
+    </p>
+    <p>
+      <label for="email">email</label>
+      <input type="email" name="email" id="email">
+    </p>
+    <p>
+      <label for="password">password</label>
+      <input type="password" name="password" id="password">
+    </p>
+    <p>
+      <button id="signUp">Sign Up</button>
+    </p>
+  </form>
+
+<!-- this is where user info will be displayed -->
+  <div id="user"></div>
+  <script>
+
+// listen for signup button click
+    document.getElementById('signUp').addEventListener('click', (event) => {
+      event.preventDefault()
+// store user data as an object
+      let user = {
+        username: document.getElementById('username').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+      }
+// locally store the user data as a string and store it locally
+      localStorage.setItem('user', JSON.stringify(user))
+    })
+
+// if user data is populated
+    if (localStorage.getItem('user')) {
+// get user data and turn string of text into object 
+      let user = JSON.parse(localStorage.getItem('user'))
+
+// display object in "user" id div 
+      document.getElementById('user').innerHTML = `
+        <h1>Username: ${user.username}</h1>
+        <h2>Email: ${user.email}</h2>
+        <h3>Password: ${user.password}</h3>
+      `
+    }
+
+  </script>
+</body>
+</html>

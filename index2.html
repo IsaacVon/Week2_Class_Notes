@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // Have users play the game 10 times, then show them their total scores.
+
+        let computerRPS;
+        let computerOptions = ['rock', 'paper', 'scissors'];
+        let person;
+        let computer;
+        let personScore = 0;
+        let computerScore = 0;
+        let wins = 0;
+        let losses = 0;
+        let ties = 0;
+        let rock = 'rock';
+        let paper = 'paper';
+        let scissors = 'scissors';
+
+        for (i = 0; i < 10; i++) {
+            
+            computer = computerOptions[Math.floor(Math.random() * 3)];
+            person = prompt('Choose rock, paper, or scissors.').toLowerCase();
+            
+            if (computer === person) {
+                computerScore++;
+                personScore++;
+                ties++;
+                alert(`Computer chose ${computer}. You tied!`)
+            } else if (computer === rock && person === paper) {
+                personScore++;
+                wins++;
+                alert(`Computer chose ${computer}. You won!`)
+            } else if (computer === rock && person === scissors) {
+                computerScore++;
+                losses++;
+                alert(`Computer chose ${computer}. You lost!`)
+            } else if (computer === paper && person === scissors) {
+                personScore++;
+                wins++;
+                alert(`Computer chose ${computer}. You won!`)
+            } else if (computer === paper && person === rock) {
+                computerScore++;
+                losses++;
+                alert(`Computer chose ${computer}. You lost!`)
+            } else if (computer === scissors && person === rock) {
+                personScore++;
+                wins++;
+                alert(`Computer chose ${computer}. You won!`)
+            } else if (computer === scissors && person === paper) {
+                computerScore++;
+                losses++;
+            } else {
+                alert("Looks like you didn't enter one of the options. Try again.")
+                i--;
+            }
+
+            alert(`
+            Person: ${personScore}
+            Computer: ${computerScore}
+            `);
+        
+        }   
+
+        alert(
+            `
+            Wins: ${wins}
+            Losses: ${losses}
+            Ties: ${ties}
+            `
+        )
+
+    </script>
+</body>
+</html>

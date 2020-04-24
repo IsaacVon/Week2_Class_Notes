@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="userDiv">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+
+    
+    const animalArray = [
+	{
+		name: "cat",
+		cool: true,
+		sound: "meow"
+	},
+	{
+		name: "dog",
+		cool: true,
+		sound: "bark"
+	},
+	{
+		name: "chicken",
+		cool: true,
+		sound: "cockadoodledoo"	
+	},
+{
+		name: "racoon",
+		cool: false,
+		sound:"uhhhhhh i eat trash"
+	},
+{
+		name: "horse",
+		cool: true,
+		sound:"neigh"
+	},
+{
+		name: "skunk",
+		cool: false,
+		sound:"pshhh"
+	},
+{
+		name: "bat",
+		cool: false,
+		sound:"sonar bshhhh"
+	},
+{
+		name: "wolf",
+		cool: true,
+		sound: "howl"
+	},
+{
+		name: "buffalo",
+		cool: true,
+		sound:"i have no idea"
+	},
+{
+		name: "dragon",
+		cool: true,
+		sound:"roar"
+	}
+]
+    
+    
+for (let i = 0; i < animalArray.length; i++) {
+      //  console.log(animalArray[i])
+      let userElem = document.createElement('div')
+      userElem.style.maxWidth = '18rem'
+      userElem.className = 'card text-white bg-info mb-3'
+      userElem.innerHTML = `
+        <div class="card-header">${animalArray[i].name}</div>
+        <div class="card-body">
+          <h5 class="card-title">${animalArray[i].
+            if(cool===true){
+                "cool";
+                }
+            else {
+	            console.log("not cool")
+f
+             }
+                  
+             </h5>
+          <p class="card-text">${animalArray[i].sound}</p>
+        </div>
+      `
+      document.getElementById('userDiv').append(userElem)
+    }
+    
+    
+    
+    
+</script>
+</body>
+</html>

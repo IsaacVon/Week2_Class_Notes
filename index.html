@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+                
+    let userChoice;
+    let computerChoice;
+    let computerOptions = ['rock', 'paper', 'scissors']
+    let rock = 'rock';
+    let paper = 'paper';
+    let scissors = 'scissors';
+    let personScore;
+    let computerScore;
+  
+
+    for (i = 0; i < 1; i++) {
+
+        person = prompt('Choose rock, paper, scissors');
+        computer = computerOptions[Math.floor(Math.random() * 3)];
+
+        //    Alert not working 
+        //alert(computer, person);
+
+    }
+   
+
+    Compare computer vs person
+
+        If statement for rock
+        
+            if (person === rock && computer === rock) {tie
+                //  TIE
+            
+            } else if  (person === rock && computer === scissors){
+                //  Win
+            } else (person === rock && computer === paper) {
+                //  Loss
+            }
+            
+        // If statement for Paper
+            if (person === paper && computer === paper) {tie
+                    //  TIE
+                } else if  (person === paper && computer === rock){
+                    //  Win
+                } else (person === paper && computer === scissors){
+                    //  Loss
+                }
+
+        // If statement for Scissors
+            if (person === scissors && computer === scissors) {tie
+                    //  TIE
+                } else if  (person === scissors && computer === paper){
+                    //  Win
+                } else (person === scissors && computer === rock){
+                    //  Loss
+                }
+
+
+
+  
+    
+
+
+
+    </script>
+
+
+
+</body>
+</html>
